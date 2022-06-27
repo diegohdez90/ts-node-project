@@ -9,7 +9,13 @@ const config: Config.InitialOptions = {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     verbose: true,
     collectCoverage: true,
-    collectCoverageFrom: ['<rootDir>/src/app/**/*.ts']
+    collectCoverageFrom: ['<rootDir>/src/app/**/*.ts'],
+    globals: {
+        'ts-jest': {
+            //... // your other configurations here
+            useESM: true,
+          },
+    }
 };
 
 export default config;
