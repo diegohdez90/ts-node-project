@@ -1,6 +1,16 @@
 import { Utils } from "../app/Utils";
 
 describe('Utils', () => {
+
+    beforeEach(() => {
+        console.log('each');
+    });
+
+    beforeAll(() => {
+        console.log('all');
+        
+    });
+
     test('should uppercase test', () => {
         const uppercaseString = Utils.toUpperCase('abc');
         expect(uppercaseString).toBe('ABC');
@@ -20,4 +30,6 @@ describe('Utils', () => {
         };
         expect(parseUrl.query).toEqual(expectedQuery);
     });
+
+    test.todo('should be invalid url')
 });
