@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "ts-node src/app/Launcher.ts"
+    "start": "ts-node src/app/Launcher.ts",
+    "itest": "jest --config jest.config.itest.js"
   },
   "keywords": [],
   "author": "",
