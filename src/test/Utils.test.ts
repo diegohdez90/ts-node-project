@@ -31,20 +31,20 @@ describe('Utils', () => {
         expect(parseUrl.query).toEqual(expectedQuery);
     });
 
-    test.only('should be invalid url', () => {
+    test('should be invalid url', () => {
         function expectError () {
            Utils.parseUrl('');
         }
         expect(expectError).toThrowError('Empty url');
     });
 
-    test.only('should be invalid url arrow function', () => {
+    test('should be invalid url arrow function', () => {
         expect(() => {
             Utils.parseUrl('');
          }).toThrowError('Empty url');
     });
 
-    test.only('should be invalid url try catch', () => {
+    test('should be invalid url try catch', () => {
         try {
             Utils.parseUrl('');
         } catch (error) {
